@@ -350,6 +350,20 @@ var jar_spots = {
                     -47.25
                 ]
             }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "26",
+                "description": "."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    171.25,
+                    -85.5
+                ]
+            }
         }
     ]
 }
