@@ -424,7 +424,13 @@ class InteractiveMap {
             position: 'bottom',
             pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
         });
-
+        this.#sidebar.addPanel({
+            id: 'sage-forest',
+            tab: '<i class="fab fa-github"></i>',
+            title: 'Sage Forest',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Sage_Forest/'
+        });
         this.#sidebar.addPanel({
             id: 'visit-github',
             tab: '<i class="fab fa-github"></i>',
