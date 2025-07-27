@@ -381,6 +381,14 @@ class InteractiveMap {
             position: 'left'
         }).addTo(this.#map);
 
+
+        this.#sidebar.addPanel({
+            id: 'home',
+            tab: '<i class="fa-solid fa-house"></i>',
+            title: 'Norn',
+            position: 'bottom',
+            button: 'https://tos.ifknow.ru/'
+        });
         this.#sidebar.addPanel({
             id: 'archi-isle',
             tab: '<i class="fa-solid fa-umbrella-beach"></i>',
