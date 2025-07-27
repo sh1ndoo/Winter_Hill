@@ -394,7 +394,14 @@ class InteractiveMap {
         //         }
         //     }
         // });
-        
+
+        this.#sidebar.addPanel({
+            id: 'archi-isle',
+            tab: '<i class="fa-solid fa-umbrella-beach"></i>',
+            title: 'Archi Isle',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Archi_Isle/'
+        });
         this.#sidebar.addPanel({
             id: 'sage-forest',
             tab: '<i class="fa-solid fa-tree"></i>',
@@ -403,10 +410,17 @@ class InteractiveMap {
             button: 'https://sh1ndoo.github.io/Sage_Forest/'
         });
         this.#sidebar.addPanel({
+            id: 'winter-hill',
+            tab: '<i class="fa-solid fa-snowflake"></i>',
+            title: 'Winter Hill',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Winter_Hill/'
+        });
+        this.#sidebar.addPanel({
             id: 'tear-woods',
             tab: '<i class="fa-regular fa-face-sad-cry"></i>',
             title: 'Tear Woods',
-            position: 'left',
+            position: 'bottom',
             button: 'https://sh1ndoo.github.io/TearWoods/'
         });
         this.#sidebar.addPanel({
@@ -416,21 +430,13 @@ class InteractiveMap {
             position: 'bottom',
             button: 'https://sh1ndoo.github.io/Mutley_Port/'
         });
-        this.#sidebar.addPanel({
-            id: 'archi-isle',
-            tab: '<i class="fa-solid fa-umbrella-beach"></i>',
-            title: 'Archi Isle',
-            position: 'bottom',
-            button: 'https://sh1ndoo.github.io/Archi_Isle/'
-        });
-        this.#sidebar.addPanel({
-            id: 'winter-hill',
-            tab: '<i class="fa-solid fa-snowflake"></i>',
-            title: 'Winter Hill',
-            position: 'bottom',
-            button: 'https://sh1ndoo.github.io/Winter_Hill/'
-        });
+
         
+        this.#sidebar.addPanel({
+            id: '',
+            tab: '<i class="fa-solid fa-minus"></i>',
+            position: 'bottom',
+        });
         this.#sidebar.addPanel({
             id: 'reset',
             tab: '<i class="fas fa-trash"></i>',
@@ -450,19 +456,6 @@ class InteractiveMap {
 
                 location.reload();
             }
-        });
-        this.#sidebar.addPanel({
-            id: 'attributions',
-            tab: '<i class="fas fa-info-circle"></i>',
-            title: 'Attributions',
-            position: 'bottom',
-            pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
-        });
-        this.#sidebar.addPanel({
-            id: 'visit-github',
-            tab: '<i class="fab fa-github"></i>',
-            position: 'bottom',
-            button: website
         });
         // make group visible on pane opening
         this.#sidebar.on('content', event => {
