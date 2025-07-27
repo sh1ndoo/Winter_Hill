@@ -381,20 +381,6 @@ class InteractiveMap {
             position: 'left'
         }).addTo(this.#map);
 
-        // this.#sidebar.addPanel({
-        //     id: 'edit',
-        //     tab: '<i class="fas fa-map-marked"></i>',
-        //     title: 'Add or edit marker',
-        //     position: 'bottom',
-        //     button: () => {
-        //         if (!this.#custom_layers.isInEditMode()) {
-        //             this.#custom_layers.enableEditing();
-        //         } else {
-        //             this.#custom_layers.disableEditing();
-        //         }
-        //     }
-        // });
-
         this.#sidebar.addPanel({
             id: 'archi-isle',
             tab: '<i class="fa-solid fa-umbrella-beach"></i>',
@@ -436,6 +422,19 @@ class InteractiveMap {
             id: '',
             tab: '<i class="fa-solid fa-minus"></i>',
             position: 'bottom',
+        });
+        this.#sidebar.addPanel({
+            id: 'edit',
+            tab: '<i class="fas fa-map-marked"></i>',
+            title: 'Add or edit marker',
+            position: 'bottom',
+            button: () => {
+                if (!this.#custom_layers.isInEditMode()) {
+                    this.#custom_layers.enableEditing();
+                } else {
+                    this.#custom_layers.disableEditing();
+                }
+            }
         });
         this.#sidebar.addPanel({
             id: 'reset',
