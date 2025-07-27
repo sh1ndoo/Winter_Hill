@@ -381,7 +381,56 @@ class InteractiveMap {
             position: 'left'
         }).addTo(this.#map);
 
-        // make resetting localStorage possible
+        // this.#sidebar.addPanel({
+        //     id: 'edit',
+        //     tab: '<i class="fas fa-map-marked"></i>',
+        //     title: 'Add or edit marker',
+        //     position: 'bottom',
+        //     button: () => {
+        //         if (!this.#custom_layers.isInEditMode()) {
+        //             this.#custom_layers.enableEditing();
+        //         } else {
+        //             this.#custom_layers.disableEditing();
+        //         }
+        //     }
+        // });
+        
+        this.#sidebar.addPanel({
+            id: 'sage-forest',
+            tab: '<i class="fa-solid fa-tree"></i>',
+            title: 'Sage Forest',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Sage_Forest/'
+        });
+        this.#sidebar.addPanel({
+            id: 'tear-woods',
+            tab: '<i class="fa-regular fa-face-sad-cry"></i>',
+            title: 'Tear Woods',
+            position: 'left',
+            button: 'https://sh1ndoo.github.io/TearWoods/'
+        });
+        this.#sidebar.addPanel({
+            id: 'mutley-port',
+            tab: '<i class="fa-solid fa-anchor"></i>',
+            title: 'Mutley Port',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Mutley_Port/'
+        });
+        this.#sidebar.addPanel({
+            id: 'archi-isle',
+            tab: '<i class="fa-solid fa-umbrella-beach"></i>',
+            title: 'Archi Isle',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Archi_Isle/'
+        });
+        this.#sidebar.addPanel({
+            id: 'winter-hill',
+            tab: '<i class="fa-solid fa-snowflake"></i>',
+            title: 'Winter Hill',
+            position: 'bottom',
+            button: 'https://sh1ndoo.github.io/Winter_Hill/'
+        });
+        
         this.#sidebar.addPanel({
             id: 'reset',
             tab: '<i class="fas fa-trash"></i>',
@@ -402,21 +451,6 @@ class InteractiveMap {
                 location.reload();
             }
         });
-
-        this.#sidebar.addPanel({
-            id: 'edit',
-            tab: '<i class="fas fa-map-marked"></i>',
-            title: 'Add or edit marker',
-            position: 'bottom',
-            button: () => {
-                if (!this.#custom_layers.isInEditMode()) {
-                    this.#custom_layers.enableEditing();
-                } else {
-                    this.#custom_layers.disableEditing();
-                }
-            }
-        });
-
         this.#sidebar.addPanel({
             id: 'attributions',
             tab: '<i class="fas fa-info-circle"></i>',
@@ -424,43 +458,6 @@ class InteractiveMap {
             position: 'bottom',
             pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
         });
-        
-        this.#sidebar.addPanel({
-            id: 'sage-forest',
-            tab: '<i class="fa-solid fa-tree"></i>',
-            title: 'Sage Forest',
-            position: 'top',
-            button: 'https://sh1ndoo.github.io/Sage_Forest/'
-        });
-        this.#sidebar.addPanel({
-            id: 'tear-woods',
-            tab: '<i class="fa-regular fa-face-sad-cry"></i>',
-            title: 'Tear Woods',
-            position: 'center',
-            button: 'https://sh1ndoo.github.io/Tear_Woods/'
-        });
-        this.#sidebar.addPanel({
-            id: 'mutley-port',
-            tab: '<i class="fa-solid fa-anchor"></i>',
-            title: 'Mutley Port',
-            position: 'top',
-            button: 'https://sh1ndoo.github.io/Mutley_Port/'
-        });
-        this.#sidebar.addPanel({
-            id: 'archi-isle',
-            tab: '<i class="fa-solid fa-umbrella-beach"></i>',
-            title: 'Archi Isle',
-            position: 'top',
-            button: 'https://sh1ndoo.github.io/Archi_Isle/'
-        });
-        this.#sidebar.addPanel({
-            id: 'winter-hill',
-            tab: '<i class="fa-solid fa-snowflake"></i>',
-            title: 'Winter Hill',
-            position: 'top',
-            button: 'https://sh1ndoo.github.io/Winter_Hill/'
-        });
-        
         this.#sidebar.addPanel({
             id: 'visit-github',
             tab: '<i class="fab fa-github"></i>',
