@@ -426,9 +426,9 @@ class InteractiveMap {
         });
         this.#sidebar.addPanel({
             id: 'sage-forest',
-            tab: '<i class="fab fa-github"></i>',
+            tab: '<i class="fa-solid fa-tree"></i>',
             title: 'Sage Forest',
-            position: 'bottom',
+            position: 'top',
             button: 'https://sh1ndoo.github.io/Sage_Forest/'
         });
         this.#sidebar.addPanel({
