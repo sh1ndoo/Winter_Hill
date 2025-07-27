@@ -424,6 +424,7 @@ class InteractiveMap {
             position: 'bottom',
             pane: `<h3>This project uses:</h3><ul>${attribution}${this.#common_attribution}</ul>`
         });
+        
         this.#sidebar.addPanel({
             id: 'sage-forest',
             tab: '<i class="fa-solid fa-tree"></i>',
@@ -431,6 +432,35 @@ class InteractiveMap {
             position: 'top',
             button: 'https://sh1ndoo.github.io/Sage_Forest/'
         });
+        this.#sidebar.addPanel({
+            id: 'tear-woods',
+            tab: '<i class="fa-regular fa-face-sad-cry"></i>',
+            title: 'Tear Woods',
+            position: 'center',
+            button: 'https://sh1ndoo.github.io/Tear_Woods/'
+        });
+        this.#sidebar.addPanel({
+            id: 'mutley-port',
+            tab: '<i class="fa-solid fa-anchor"></i>',
+            title: 'Mutley Port',
+            position: 'top',
+            button: 'https://sh1ndoo.github.io/Mutley_Port/'
+        });
+        this.#sidebar.addPanel({
+            id: 'archi-isle',
+            tab: '<i class="fa-solid fa-umbrella-beach"></i>',
+            title: 'Archi Isle',
+            position: 'top',
+            button: 'https://sh1ndoo.github.io/Archi_Isle/'
+        });
+        this.#sidebar.addPanel({
+            id: 'winter-hill',
+            tab: '<i class="fa-solid fa-snowflake"></i>',
+            title: 'Winter Hill',
+            position: 'top',
+            button: 'https://sh1ndoo.github.io/Winter_Hill/'
+        });
+        
         this.#sidebar.addPanel({
             id: 'visit-github',
             tab: '<i class="fab fa-github"></i>',
